@@ -4,6 +4,16 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - Entry point of the program
+ *
+ * Description: This is the main function that serves as the entry point
+ *              of the program. It generates a random number, determines
+ *              whether it is positive, negative, or zero, and prints the
+ *              corresponding message.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 int n;

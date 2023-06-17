@@ -11,12 +11,15 @@
 int main(void)
 {
 int comb;
-for (comb = 0; comb < 9; comb++)
-{ 
+for (comb = 0; comb < 10; comb++)
+{
 putchar (comb + '0');
+if (comb != 9)
+{
 putchar (',');
+putchar (' ');
 }
-putchar('9');
+}
 putchar('\n');
 return (0);
 }

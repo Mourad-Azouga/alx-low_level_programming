@@ -7,10 +7,6 @@
  * Return: On success, returns the character written.
  * On error, returns -1 and sets errno appropriately.
  */
-int _putchar(char c)
-{
-return (write(1, &c, 1));
-}
 /**
  * main - Entry point of the program
  *

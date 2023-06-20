@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * main - Entry point of the program
+ * print_alphabet - Entry point
  *
- * Description: This is the main function that serves as the
- *              starting point of the program.
+ * Description: This is the print alphabet
+ * function that serves as the
+ *              prototype for the program
  *
  * Return: Always returns 0.
  */

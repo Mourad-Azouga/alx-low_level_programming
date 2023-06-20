@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - Entry point of the program
- *
+ *@c: The character to be checked.
  * Description: This function tests if the character
  *              is alphabetical and returns 1 if true
  *              or 0 if false.

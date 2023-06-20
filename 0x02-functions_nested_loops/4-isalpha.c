@@ -10,7 +10,7 @@
  */
 int _isalpha(int c)
 {
-if ((_isalpha(c) != 0) || (_isalpha(c - 32) != 0))
+if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 return (1);
 else
 return (0);

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * times_table - prints the times table up to a given number
+ * print_times_table - prints the times table up to a given number
  * @n: integer to determine the size of the table
  */
 void print_times_table(int n)
@@ -22,11 +22,15 @@ void print_times_table(int n)
 				{
 					_putchar(',');
 					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
 					_putchar('0' + prod);
 				}
 				else
 				{
 					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
 					_putchar(' ');
 					_putchar('0' + prod / 10);
 					_putchar('0' + prod % 10);

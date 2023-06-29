@@ -9,4 +9,5 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 int _strlen(char *s);
+int _putchar(char c);
 #endif /* MAIN_H */

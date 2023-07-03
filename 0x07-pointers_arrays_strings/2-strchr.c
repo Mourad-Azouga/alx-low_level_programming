@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_strlen.c"
 #include <stddef.h>
 
 
@@ -12,9 +11,7 @@
 char *_strchr(char *s, char c)
 {
 unsigned int i;
-unsigned int len;
-len = _strlen(s);
-for (i = 0; i < len; i++)
+for (i = 0; s[i] >= '\0'; i++)
 {
 if (s[i] == c)
 {

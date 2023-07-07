@@ -1,15 +1,19 @@
-#include <stdio.h>
 #include"main.h"
+#include <stdio.h>
+#define UNUSED(x) (void)(x)
 /**
  * main - main function
  * @argc: argumentc
  * @argv: vector of arguments
  *Return: always 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char  *argv[])
 {
-int count;
-for (count = 1; count < argc; count++)
-printf("%s\n", argv[count]);
-return (0);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
+	return (0);
 }

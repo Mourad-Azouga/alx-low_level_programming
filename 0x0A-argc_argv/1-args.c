@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include"main.h"
-
+#define UNUSED(x) (void)(x)
 /**
  * main - Entry point of the program
  * @argc: The number of command line arguments
@@ -10,6 +10,7 @@
  */
 int main(int  argc, char *argv[])
 {
-printf("%s\n", argv[argc]);
+UNUSED(argv);
+printf("%d\n", argc - 1);
 return (0);
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+int is_numeric(char *str);
 /**
  * main - Entry point of the program
  * @argc: The number of arguments
@@ -9,7 +9,7 @@
  *
  * Return: 0 if successful, 1 if error
  */
-int is_numeric(char *str);
+
 int main(int argc, char *argv[])
 {
 	int i, sum = 0;

@@ -9,6 +9,7 @@
  *
  * Return: 0 if successful, 1 if error
  */
+int is_numeric(char *str);
 int main(int argc, char *argv[])
 {
 	int i, sum = 0;

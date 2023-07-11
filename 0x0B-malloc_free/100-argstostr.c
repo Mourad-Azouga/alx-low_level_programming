@@ -25,7 +25,7 @@ for (memloc = 0; memloc < ac; memloc++)
 len[memloc] = _strlen(av[memloc]);
 Tlen += len[memloc];
 }
-concat = malloc((Tlen + ac) * sizeof(char));
+concat = malloc((Tlen + memloc) * sizeof(char));
 if (concat == NULL)
 {
 free(len);

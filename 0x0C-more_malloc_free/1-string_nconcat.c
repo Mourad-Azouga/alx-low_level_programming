@@ -1,4 +1,3 @@
-#include "strlen.c"
 #include "main.h"
 #include <stdlib.h>
 
@@ -11,26 +10,35 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-char *concat;
-unsigned int i, j, len1, len2;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-len1 = _strlen(s1);
-len2 = _strlen(s2);
-concat = malloc((len1 + len2 + 1) * sizeof(char));
+unsigned int i, len1, len2;
+	char *concat;
 
-if (concat == NULL)
-return (NULL);
+	if (s2 == NULL)
+		s2 = "";
+	if (s1 == NULL)
+		s1 = "";
 
-if (n >= len2)
-n = len2;
+	len1 = 0;
+	len2 = 0;
+	while (s2[len2] != '\0')
+		len2++;
+	while (s1[len1] != '\0')
+		len1++;
 
-for (i = 0; i < len1; i++)
-concat[i] = s1[i];
-for (j = 0; j < len2; j++)
-concat[i++] = s2[j];
-concat[i] = '\0';
-return (concat);
+	if (n >= len2)
+		n = len2;
+
+	concat = malloc(sizeof(char) * n + len1 + 1);
+	if (concat == NULL)
+		return (NULL);
+
+	for (i = 0; i < len1; i++)
+		concat[i] = s1[i];
+
+	for (i = 0; i < n; i++)
+		concat[i + len1] = s2[i];
+
+	concat[i + len1] = '\0';
+
+	return (concat);
 }

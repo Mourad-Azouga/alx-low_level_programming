@@ -17,9 +17,14 @@ return (NULL);
 
 array = malloc(nmemb * size);
 
-if (array == NULL)
-return (NULL);
-for (i = 0; i < nmemb * size; i++)
-		array[i] = 0;
+if (array != NULL)
+{
+for (i = 0; i < (nmemb * size); i++)
+{
+array[i] = 0;
+}
 return (array);
+}
+else
+return (NULL);
 }

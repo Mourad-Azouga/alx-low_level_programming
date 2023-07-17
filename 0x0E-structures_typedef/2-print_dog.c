@@ -15,9 +15,6 @@ printf("Name: (nil)\n");
 else
 printf("Name: %s\n", d->name);
 
-if (d->age == NULL)
-printf("Age: (nil)\n");
-else
 printf("Age: %.1f\n", d->age);
 
 if (d->owner == NULL)

@@ -21,9 +21,9 @@ va_start(lst, n);
 for (i = 0; i < n; i++)
 {
 z = va_arg(lst, int);
-printf("%d", z);
-if (separator != NULL && i != n - 1)
+	if (separator != NULL && i > 0)
 printf("%s", separator);
+printf("%d", z);
 }
 printf("\n");
 va_end(lst);

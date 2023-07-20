@@ -10,22 +10,18 @@
  * @n: Number of arguments
  * Return: Void
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-va_list lst;
-unsigned int i, z;
-if (n > 0)
-{
-va_start(lst, n);
-for (i = 0; i < n; i++)
-{
-z = va_arg(lst, int);
-	if (separator != NULL && i > 0)
-printf("%s", separator);
-printf("%d", z);
-}
-printf("\n");
-va_end(lst);
-}
+	unsigned int i;
+	va_list printArgs;
+
+	va_start(printArgs, n);
+	for (i = 0; i < n; i++)
+	{
+		if (i > 0 && separator != NULL)
+			printf("%s", separator);
+		printf("%d", va_arg(printArgs, int));
+	}
+	va_end(printArgs);
+	printf("\n");
 }

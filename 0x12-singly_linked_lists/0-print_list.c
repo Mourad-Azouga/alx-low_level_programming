@@ -12,9 +12,9 @@ int _strlen(const char *s)
 {
 int len = 0;
 if (!s)
-	return(0);
+return (0);
 while (*s++)
-	len++;
+len++;
 return (len);
 }
 
@@ -24,7 +24,7 @@ return (len);
  * Return: the ammount of nodes
 */
 size_t print_list(const list_t *h)
-{ 
+{
 size_t count = 0;
 while (h != NULL)
 {

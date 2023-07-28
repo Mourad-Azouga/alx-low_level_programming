@@ -1,6 +1,11 @@
-#include "lists.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "lists.h"
+/**
+ * print_list - Prints list
+ * @h: the list
+ * Return: the ammount of nodes
+*/
+
 
 size_t print_list(const list_t *h)
 {
@@ -11,6 +16,7 @@ while (current != NULL)
 printf("%s ", current->str);
 current = current->next;
 count++;
+printf("\n");
 }
 return (count);
 }

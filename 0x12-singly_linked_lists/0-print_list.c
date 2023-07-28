@@ -1,7 +1,7 @@
 #include "strlen.c"
 #include <stdio.h>
 #include "lists.h"
-/** 
+/**
  * print_list - Prints list
  * @h: the list
  * Return: the ammount of nodes

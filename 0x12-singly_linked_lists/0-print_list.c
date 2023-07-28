@@ -1,24 +1,7 @@
-
+#include "strlen.c"
 #include <stdio.h>
 #include "lists.h"
-int _strlen(const char *s);
-/**
- * _strlen - Calculates the len
- * @s: The string to be len
- * Return: Strlen
-*/
-
-int _strlen(const char *s)
-{
-int len = 0;
-if (!s)
-return (0);
-while (*s++)
-len++;
-return (len);
-}
-
-/**
+/** 
  * print_list - Prints list
  * @h: the list
  * Return: the ammount of nodes

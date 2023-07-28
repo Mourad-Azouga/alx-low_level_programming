@@ -5,19 +5,20 @@
  * @h: the list
  * Return: the ammount of nodes
 */
-
 size_t print_list(const list_t *h)
-{
-	int count = 0;
+{ 
+size_t count = 0;
 
-	while (h != NULL)
+while (h != NULL)
 {
-if (h->str != NULL)
-printf("[%u] %s\n", h->len, h->str);
-else
+if (h->str == NULL)
 printf("[0] (nil)\n");
-h = h->next;
-count++;
+else
+{
+printf("[%u] %s\n", h->len, h->str);
 }
-	return (count);
+count++;
+h = h->next;
+}
+return (count);
 }

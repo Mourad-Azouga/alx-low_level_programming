@@ -13,10 +13,15 @@ const list_t *current = h;
 size_t count = 0;
 while (current != NULL)
 {
-printf("%s ", current->str);
-current = current->next;
+{
+if (current->str != NULL)
+printf("[%u] %s\n", current->len, current->str);
+else
+printf("[0] (nil)\n");
+
 count++;
-printf("\n");
+current = current->next;
+}
 }
 return (count);
 }

@@ -17,8 +17,6 @@ listint_t *temp;
 
 	temp = head->next;
 
-	if (head->str != NULL)
-	free(head->str);
 
 	free(head);
 	head = temp;

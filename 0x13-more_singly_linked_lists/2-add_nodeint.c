@@ -1,4 +1,4 @@
-#include <stddef.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
 
@@ -16,9 +16,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	return (NULL);
 
 	new_node->n = n;
-	new_node->next = *head; // Make the new node point to the current head
-	*head = new_node;       // Update the head to point to the new node
+	new_node->next = *head; 
+	*head = new_node;       
 
-	return (new_node);      // Return the address of the new node
+	return (new_node);     
 }
 

@@ -28,7 +28,6 @@ else
 	tail = tail->next;
 
 	tail->next = new_node;
-
 	}
 	return (new_node);
 }

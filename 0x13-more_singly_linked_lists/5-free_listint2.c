@@ -23,4 +23,3 @@ listint_t *temp;
 	free(temp);
 *head = NULL;
 }
-

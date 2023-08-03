@@ -3,7 +3,9 @@
 /**
  * set_bit - sets a bit
  * @n: integer to get
- */
+ * @index: The index to point
+ * Return: 1 If success d -1 if failklurea
+*/
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	if (index > 32)

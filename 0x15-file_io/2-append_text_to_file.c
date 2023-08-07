@@ -5,7 +5,7 @@
  * @b: The str
  * Return: len
  */
-int _strlen(char *b);
+int _strlen(char *b)
 {
 int i = 0;
 if (!b)
@@ -20,13 +20,12 @@ return (i);
 
 
 /**
- * create_file - Creates a file
+ * append_text_to_file - Adds text to existing file
  * @filename: The file name
  * @text_content: Text cnt
  * Return: 1 if success and -1 if faillure
  */
-
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 int fd;
 ssize_t bytes = 0, len = _strlen(text_content);

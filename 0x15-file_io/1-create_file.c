@@ -1,11 +1,10 @@
 #include "main.h"
-#include <stat.h>
 /**
  * _strlen - length of str
  * @b: The str
  * Return: len
  */
-int _strlen(char *b);
+int _strlen(char *b)
 {
 int i = 0;
 if (!b)

@@ -10,14 +10,11 @@ int i = 0;
 if (!b)
 return (0);
 
-while(*b++)
+while (*b++)
 i++;
 
 return (i);
 }
-
-
-
 /**
  * create_file - Creates a file
  * @filename: The file name
@@ -36,6 +33,6 @@ if (fd == -1)
 return (-1);
 if (len)
 bytes = write(fd, text_content, len);
-close (fd);
+close(fd);
 return (bytes == len ? 1 : -1);
 }

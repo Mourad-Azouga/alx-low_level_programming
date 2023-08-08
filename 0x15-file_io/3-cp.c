@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int fdFrum, fdToo, wrote, readed;
+	int fr_from, fr_to, _write, _read;
 	char buff[1024];
 
 	if (ac != 3)
@@ -15,40 +15,40 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fdFrum = open(av[1], O_RDONLY);
-	if (fdFrum == -1)
+	fr_from = open(av[1], O_RDONLY);
+	if (fr_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	fdToo = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fdToo == -1)
+	fr_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fr_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	while ((readed = read(fdFrum, buff, 1024)) > 0)
+	while ((_read = read(fr_from, buff, 1024)) > 0)
 	{
-		wrote = write(fdToo, buff, readed);
-		if (wrote == -1)
+		_write = write(fr_to, buff, _read);
+		if (_write == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 	}
-	if (readed == -1)
+	if (_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	if (close(fdFrum) == -1)
+	if (close(fr_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdFrum);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fr_from);
 		exit(100);
 	}
-	if (close(fdToo) == -1)
+	if (close(fr_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdToo);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fr_to);
 		exit(100);
 	}
 	return (0);

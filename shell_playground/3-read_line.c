@@ -8,6 +8,7 @@ char *strtok(char *str, const char *delim);
 
     void main(int argc, char *argv[])
        {
+        int d;
         size_t n;
         char *buffer, *toktok = NULL;
     // Reads the line 
@@ -22,5 +23,10 @@ char *strtok(char *str, const char *delim);
            toktok = strtok(NULL, " ");
            }          
           
+           printf("Press 0 to exit");
+           scanf("%d", &d);
+           if (d = 0)
            exit(EXIT_SUCCESS);
+           else
+           exit(EXIT_FAILURE);
        }

@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    const char* const argv[] = {"/bin/ls", "-l", "/tmp/", NULL};
+    char*  argv[] = {"/bin/ls", "-l", "/tmp/", NULL};
 
     printf("Before execve\n");
     if (execve(argv[0], argv, NULL) == -1)

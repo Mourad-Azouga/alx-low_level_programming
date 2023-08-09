@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stat.h>
-/**
+/**r
+ * 
  * _strlen - length of str
  * @b: The str
  * Return: len

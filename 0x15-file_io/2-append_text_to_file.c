@@ -1,9 +1,7 @@
 #include "main.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+
 /**
- * _strlen - Personal version of strlen
+ * _strlen - length of str
  * @b: The str
  * Return: len
  */
@@ -18,20 +16,22 @@ i++;
 
 return (i);
 }
+
+
+
 /**
- * create_file - Creates a file
+ * append_text_to_file - Adds text to existing file
  * @filename: The file name
  * @text_content: Text cnt
  * Return: 1 if success and -1 if faillure
  */
-
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 int fd;
 ssize_t bytes = 0, len = _strlen(text_content);
 if (!filename)
 return (-1);
-fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+fd = open(filename, O_WRONLY | O_APPEND);
 if (fd == -1)
 return (-1);
 if (len)

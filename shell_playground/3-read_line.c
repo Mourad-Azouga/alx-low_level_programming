@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-char *strtok(char *str, const char *delim);
 
 int main(int argc, char *argv[]) {
     int d = 1;
@@ -31,12 +30,13 @@ int main(int argc, char *argv[]) {
     if (d == 1) { // Use == for comparison
         printf("Input anythig to exit\n");
         scanf("%d", &d);
-    } else {
+    } else 
+    {
         exit(EXIT_SUCCESS);
     }
 
     // Free allocated memory
     free(buffer);
-
-    return 0;
+     
+    return (0);
 }

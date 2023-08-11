@@ -10,28 +10,30 @@
  */
 int main(void)
 {
-    int i;
+   pid_t child[5];
+        int i;
      char*  argv[] = {"/bin/ls", "-l", "/tmp/", NULL};
-    
+
     for(i=0;i<5;i++) // loop will run n times (n=5)
     {
         if(fork() == 0)
         {
-            
-            
+            child[i] = fork();
+
     if (execve(argv[0], argv, NULL) == -1)
     {
         perror("Error:");
     }
-    }    
-    for(int i=0;i<5;i++) // loop will run n times (n=5)
-    {
-
-        // To know which child is on
-    printf("[son] pid %d from [parent] pid %d\n",getpid(),getppid());
-    wait(NULL);
     }
 
+    }
+    for(int i=0;i<5;i++) // loop will run n times (n=5)
+    {
+         // To know which child is on
+            printf("[son] pid %d from [parent] pid %d\n",getpid(),getppid());
+
+            wait(NULL);
+
+        }
     return (0);
 }
-

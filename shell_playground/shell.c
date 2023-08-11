@@ -11,44 +11,28 @@ int main(void)
     size_t n = 0; // Initialize n to 0
     char *buffer = NULL; // Initialize buffer to NULL
     //char *toktok = NULL;
-    FILE *file;
-   
+    char* exe[2];
 
+   
     // Reads the line
     printf("$ ");
     getline(&buffer, &n, stdin);
-    printf("%s", buffer);
-    file = fopen("buffer", "rw");
-char* exe[] = {"buffer", NULL}; 
+    buffer[strlen(buffer) - 1] = '\0'; // Remove the newline character
+
+    // Allocate memory for the executable path
+    exe[0] = (char *)malloc(strlen(buffer) + 1);
+    strcpy(exe[0], buffer);
+    exe[1] = NULL;
+
 
     if (execve(exe[0], exe, NULL) == -1)
 			{
 				perror("Error:");
 			}
-    fclose(file);
 
-    /*// Divides the line into words
-    toktok = strtok(buffer, " ");
-
-    // Prints the line
-    while (toktok != NULL) {
-        printf("%s", toktok);
-        toktok = strtok(NULL, " ");
-    if (toktok != NULL)
-        printf("\n");
-    }*/
-
-    // Added code so it doesn't instantly shut down in exe
-    /* if (d == 1)
-    {
-        printf("Input anything to exit\n");
-        scanf("%d", &d);
-    } else 
-    {
-        exit(EXIT_SUCCESS);
-    }*/
 
     // Free allocated memory
+    free(exe[0]);
     free(buffer);
      
     return (0);

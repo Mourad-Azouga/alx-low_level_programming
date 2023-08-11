@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
-//#include <sys/wait.h>//this will return an error in vscode as it isnt a linux environment and doesnt have the header
+#include <sys/wait.h>//this will return an error in vscode as it isnt a linux environment and doesnt have the header
 
 /**
  * main - execve example
@@ -38,6 +38,5 @@ int main(void)
         perror("Error:");
     }
     printf("After execve\n");
-    wait();
     return (0);
 }

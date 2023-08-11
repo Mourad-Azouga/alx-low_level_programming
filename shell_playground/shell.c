@@ -11,12 +11,20 @@ int main(void)
     size_t n = 0; // Initialize n to 0
     char *buffer = NULL; // Initialize buffer to NULL
     //char *toktok = NULL;
-    char*  argv[] = {buffer, NULL};
+    char*  argv[2];
 
     // Reads the line
     printf("$ ");
     getline(&buffer, &n, stdin);
-    execve(buffer, argv, NULL);
+    argv[0] = buffer;
+    argv[1] = NULL;
+
+    if (execve(argv[0], argv, NULL) == -1)
+			{
+				perror("Error:");
+			}
+
+
     /*// Divides the line into words
     toktok = strtok(buffer, " ");
 

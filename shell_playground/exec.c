@@ -12,7 +12,7 @@ int main(void)
 {
 	pid_t child[5];
 	int i;
-	char*  argv[] = {"boobom", "-l", "/tmp/", NULL};
+	char*  argv[] = {"/bin/ls", "-l", "/tmp/", NULL};
     
 		for(i = 0; i < 5; i++) // loop will run n times (n=5)
 		{
@@ -53,11 +53,4 @@ int main(void)
 	sleep(1);
 	}
 		return (0);
-
-        else
-        {
-                printf("Child with PID %d terminated abnormally\n", terminated_child);
-        }
-        sleep(1);
-                return (0);
 }

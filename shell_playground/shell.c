@@ -17,7 +17,7 @@ int main(void)
     printf("$ ");
     getline(&buffer, &n, stdin);
     printf("%s", buffer);
-    const char* const exe[] = {"buffer", NULL}; 
+	char* exe[] = {"buffer", NULL}; 
 
     if (execve(exe[0], exe, NULL) == -1)
 			{

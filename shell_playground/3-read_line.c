@@ -27,8 +27,9 @@ int main(int argc, char *argv[]) {
     }
 
     // Added code so it doesn't instantly shut down in exe
-    if (d == 1) { // Use == for comparison
-        printf("Input anythig to exit\n");
+    if (d == 1)
+    {
+        printf("Input anything to exit\n");
         scanf("%d", &d);
     } else 
     {

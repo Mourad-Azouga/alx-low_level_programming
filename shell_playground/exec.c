@@ -53,14 +53,11 @@ int main(void)
 	sleep(1);
 	}
 		return (0);
-}
 
-        }
         else
         {
                 printf("Child with PID %d terminated abnormally\n", terminated_child);
         }
         sleep(1);
-        }
                 return (0);
 }

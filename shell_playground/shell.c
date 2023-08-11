@@ -11,19 +11,21 @@ int main(void)
     size_t n = 0; // Initialize n to 0
     char *buffer = NULL; // Initialize buffer to NULL
     //char *toktok = NULL;
+    FILE *file;
    
 
     // Reads the line
     printf("$ ");
     getline(&buffer, &n, stdin);
     printf("%s", buffer);
-	char* exe[] = {"buffer", NULL}; 
+    file = fopen("buffer", "rw");
+	const char* const exe[] = {"buffer", NULL}; 
 
     if (execve(exe[0], exe, NULL) == -1)
 			{
 				perror("Error:");
 			}
-
+    fclose(file);
 
     /*// Divides the line into words
     toktok = strtok(buffer, " ");

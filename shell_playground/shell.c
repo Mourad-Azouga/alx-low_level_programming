@@ -11,15 +11,15 @@ int main(void)
     size_t n = 0; // Initialize n to 0
     char *buffer = NULL; // Initialize buffer to NULL
     //char *toktok = NULL;
-    char*  argv[2];
+   
 
     // Reads the line
     printf("$ ");
     getline(&buffer, &n, stdin);
-    argv[0] = buffer;
-    argv[1] = NULL;
+    printf("%s", buffer);
+    const char* const exe[] = {"buffer", NULL}; 
 
-    if (execve(argv[0], argv, NULL) == -1)
+    if (execve(exe[0], exe, NULL) == -1)
 			{
 				perror("Error:");
 			}

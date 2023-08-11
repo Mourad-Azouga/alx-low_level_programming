@@ -19,7 +19,7 @@ int main(void)
     getline(&buffer, &n, stdin);
     printf("%s", buffer);
     file = fopen("buffer", "rw");
-	const char* const exe[] = {"buffer", NULL}; 
+char* exe[] = {"buffer", NULL}; 
 
     if (execve(exe[0], exe, NULL) == -1)
 			{

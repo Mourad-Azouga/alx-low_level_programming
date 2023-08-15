@@ -13,7 +13,7 @@ int main(void)
     //char *toktok = NULL;
     char* exe[2];
 
-   
+start: 
     // Reads the line
     printf("$ ");
     getline(&buffer, &n, stdin);
@@ -34,6 +34,6 @@ int main(void)
     // Free allocated memory
     free(exe[0]);
     free(buffer);
-     
+     goto start;
     return (0);
 }

@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+
 
 int main(void) 
 {
@@ -13,24 +12,8 @@ int main(void)
     char *buffer = NULL; // Initialize buffer to NULL
     //char *toktok = NULL;
     char* exe[2];
-<<<<<<< HEAD
 
 start: 
-=======
-    pid_t child;
-
-   start;
-    //starts the child process
-    child = fork();
-    if (child == -1)
-    {
-        perror("fork");
-        return (0);
-    }
-    else
-    if (child == 0)
-    {
->>>>>>> c2700a45266441f715014fe708f87eecc0161a76
     // Reads the line
     printf("$ ");
     getline(&buffer, &n, stdin);
@@ -47,16 +30,10 @@ start:
 				perror("Error:");
 			}
 
-    }
+
     // Free allocated memory
     free(exe[0]);
     free(buffer);
-<<<<<<< HEAD
      goto start;
-=======
-    
-     goto start;
-
->>>>>>> c2700a45266441f715014fe708f87eecc0161a76
     return (0);
 }

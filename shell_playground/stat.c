@@ -13,7 +13,7 @@ int main(int ac, char **av)
     unsigned int i;
     struct stat st;
 
-    if (ac < 2)
+ if (ac < 2)
     {
         printf("Usage: %s path_to_file ...\n", av[0]);
         return (1);

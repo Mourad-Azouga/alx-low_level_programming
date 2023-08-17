@@ -22,7 +22,7 @@ for (i = 0; environ[i] != NULL; i++)
 {
 if (strncmp(environ[i], name, len) == 0)
 	{
-	pval = environ[i] + len;
+	pval = environ[i];
 	break;
 	}
 }
@@ -41,7 +41,10 @@ int main(int argc, char **argv, char **env)
 {
 	char *en;
 if (argc != 2)
-return (-1);
+{
+	printf("Usage: ./getenv input\n");
+	return (-1);
+}	
 else
 en = _getenv(argv[1]);
 
@@ -51,6 +54,6 @@ printf("%s\n", en);
 return (0);
 }
 else
+printf("none existant\n");
 return (-1);
-
 }

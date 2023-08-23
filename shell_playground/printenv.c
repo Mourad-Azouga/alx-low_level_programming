@@ -5,13 +5,12 @@
 
 extern char **environ;
 /*
- * main - Main program
- * @ac: number of args
- * @av: arg holder
- * @env: environment
+ * my_env - prints the current environement
+ * Return: 0 on success -1 on failure
  */
 
-int main() {
+ int my_env()
+ {
     char **env = environ;
 
     while (*env != NULL) {
@@ -19,6 +18,6 @@ int main() {
         env++;
     }
 
-    return 0;
+    return (0);
 }
 

@@ -59,7 +59,6 @@ int main(void)
 
 	buf = malloc(buf_size + 1);
 	if (buf == NULL)
-@@ -24,9 +69,27 @@ int main(void)
 
 	while (1)
 	{
@@ -87,7 +86,7 @@ int main(void)
 		if (bytes_read == -1)
 		{
 			write(STDERR_FILENO, "getline failed\n", 14);
-@@ -40,15 +103,29 @@ int main(void)
+
 		}
 		else if (pid == 0)
 		{
@@ -106,9 +105,7 @@ int main(void)
 			}
 			else
 				args[0] = buf;
-/*printf("%s\n", args[0]);
-printf("%s\n", args[1]);
-printf("%s\n", args[2]);*/
+
 			execve(args[0], args, NULL);
 			write(STDERR_FILENO, "./shell: No such file or directory\n", 35);
 			_exit(EXIT_FAILURE);

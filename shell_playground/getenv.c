@@ -13,8 +13,8 @@ extern char **environ;
 char *_getenv(const char *name)
 {
 int i = 0;
-int len = strlen(name);
-char *pval = NULL;
+int len = _strlen(name);
+char *ptr = NULL;
 
 
 
@@ -22,11 +22,11 @@ for (i = 0; environ[i] != NULL; i++)
 {
 if (strncmp(environ[i], name, len) == 0)
 	{
-	pval = environ[i];
+	ptr = environ[i];
 	break;
 	}
 }
-return (pval);
+return (ptr);
 }
 
 /**

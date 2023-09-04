@@ -4,6 +4,22 @@
 #include <fcntl.h>
 #include <unistd.h>
 /**
+ * _strlen - Personal version of strlen
+ * @b: The str
+ * Return: len
+ */
+int _strlen(char *b)
+{
+int i = 0;
+if (!b)
+return (0);
+
+while (*b++)
+i++;
+
+return (i);
+}
+/**
  * create_file - Creates a file
  * @filename: The file name
  * @text_content: Text cnt

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-
+int _strlen(char *b);
 int _putchar(char c);
 void _puts(char *str);
 ssize_t read_textfile(const char *filename, size_t letters);

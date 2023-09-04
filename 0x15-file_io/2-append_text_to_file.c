@@ -18,18 +18,18 @@ if (!filename)
 fp = open(filename, O_WRONLY | O_APPEND);
 if (fp == -1)
 	return (-1);
-/*While loop to get length instead of _strlen*/
-while (!text_content)
-	{
-		for (len = 0; text_content[len];)
-			len++;
-	}
-
+if (text_content)
+{
+		for (len = 0; text_content[len]; len++){}
+	
 
 byte = write(fp, text_content, len);
 if (byte == -1)
+{
+	close(fp);
 	return (-1);
-
+}
+}
 close(fp);
 return (1);
 }

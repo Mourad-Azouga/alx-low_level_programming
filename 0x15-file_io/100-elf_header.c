@@ -1,5 +1,6 @@
 #include "main.h"
 #include <elf.h>
+#include <unistd.h>
 void more_osabi(Elf64_Ehdr h);
 /**
  * print_magic - Prints magic ELF

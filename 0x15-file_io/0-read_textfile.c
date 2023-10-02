@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints it to the POSIX stdout.
  * @filename: the file that will be read
  * @letters: number of letters that will be printed
- * @Return:returns the actual number of letters it could read and print
+ * Return:returns the actual number of letters it could read and print
  * if the file can not be opened or read, return 0
  * if filename is NULL return 0
  * if write fails or does not write the expected amount of bytes, return 0

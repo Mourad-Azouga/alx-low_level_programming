@@ -1,11 +1,11 @@
 #include "main.h"
+#define BUFSIZE 1024
 /**
  * main - mainprogram
  * @ac: argument count
  * @av: argument holder
  * Return: 0 success -1 failure
 */
-#define BUFSIZE 1204
 int main(int ac, char *av[])
 {
 	int fd_from, fd_to, rd_stat, wr_stat;

@@ -18,7 +18,7 @@ if (str)
 {
 	while (str[i])
 		i++;
-new_head->str = strdup(str);
+		new_head->str = strdup(str);
 	if (!new_head->str)
 	{
 	free(new_head);
